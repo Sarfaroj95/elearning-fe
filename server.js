@@ -20,7 +20,7 @@ app.get('/test', function (req, res) {
 });
 
 
-mongoose.connect(config.DB_URL, (err, doc) => {
+mongoose.connect(config.DB_URL, { useUnifiedTopology: true, useNewUrlParser: true }, (err, doc) => {
     if (err) {
         console.log(err);
     } else {
